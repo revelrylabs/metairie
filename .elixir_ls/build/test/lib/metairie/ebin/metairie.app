@@ -1,0 +1,12 @@
+{application,metairie,
+             [{applications,[kernel,stdlib,elixir,logger,vmstats,statix,ecto,
+                             phoenix]},
+              {description,"metairie"},
+              {modules,['Elixir.Metairie','Elixir.Metairie.Application',
+                        'Elixir.Metairie.Ecto.Logger',
+                        'Elixir.Metairie.Erlang.Stats',
+                        'Elixir.Metairie.Phoenix.Instrumenter',
+                        'Elixir.Metairie.StatixImpl']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {mod,{'Elixir.Metairie.Application',[]}}]}.
