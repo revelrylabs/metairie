@@ -1,7 +1,7 @@
 defmodule Metairie.Phoenix.Instrumenter do
   @moduledoc false
 
-  alias Metairie.StatixImpl
+  alias Metairie.StatsCollector
 
   @doc false
   def phoenix_controller_call(:start, _compile_metadata, runtime_metadata) do

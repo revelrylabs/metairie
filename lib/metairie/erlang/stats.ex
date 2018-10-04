@@ -1,6 +1,6 @@
 defmodule Metairie.Erlang.Stats do
   @moduledoc false
-  alias Metairie.StatixImpl
+  alias Metairie.StatsCollector
 
   @behaviour :vmstats_sink
 

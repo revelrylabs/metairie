@@ -1,6 +1,6 @@
 defmodule Metairie.Ecto.Logger do
   @moduledoc false
-  alias Metairie.StatixImpl
+  alias Metairie.StatsCollector
 
   def record_ecto_metric(entry) do
     try do
