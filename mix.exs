@@ -55,7 +55,7 @@ defmodule Metairie.MixProject do
       maintainers: ["Revelry Labs"],
       licenses: ["MIT"],
       links: %{
-        "GitHub" => "https://github.com/revelrylabs/transmit"
+        "GitHub" => "https://github.com/revelrylabs/metairie"
       },
       build_tools: ["mix"]
     ]
