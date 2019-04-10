@@ -31,11 +31,9 @@ defmodule Metairie.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix, "~> 1.4"},
       {:telemetry, "~> 0.4.0"},
       {:vmstats, "~> 2.3"},
       {:statix, "~> 1.1"},
-      {:jason, "~> 1.0", optional: true},
       {:ex_doc, "~> 0.20", only: :dev}
     ]
   end
