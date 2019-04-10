@@ -5,9 +5,19 @@ defmodule Metairie.MixProject do
     [
       app: :metairie,
       version: "0.1.0",
-      elixir: "~> 1.7",
+      elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: description(),
+      elixirc_paths: elixirc_paths(Mix.env()),
+      package: package(),
+
+      # Docs
+      name: "Metairie",
+      source_url: "https://github.com/revelrylabs/metairie",
+      homepage_url: "https://github.com/revelrylabs/metairie",
+      # The main page in the docs
+      docs: [main: "Metairie", extras: ["README.md"]]
     ]
   end
 
@@ -21,10 +31,33 @@ defmodule Metairie.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix, "~> 1.3.0-rc"},
-      {:ecto, "~> 2.2"},
+      {:phoenix, "~> 1.4"},
+      {:telemetry, "~> 0.4.0"},
       {:vmstats, "~> 2.3"},
-      {:statix, "~> 1.1"}
+      {:statix, "~> 1.1"},
+      {:jason, "~> 1.0", optional: true},
+      {:ex_doc, "~> 0.20", only: :dev}
+    ]
+  end
+
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_), do: ["lib"]
+
+  defp description do
+    """
+    Plug for handling the creation of presigned urls for direct client-side uploading
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README.md", "LICENSE", "CHANGELOG.md"],
+      maintainers: ["Revelry Labs"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/revelrylabs/transmit"
+      },
+      build_tools: ["mix"]
     ]
   end
 end
