@@ -2,6 +2,16 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+if Mix.env() == :test do
+  config(
+    :vmstats,
+    sink: Metairie.VMStats.Sink,
+    base_key: "metairie.erlang",
+    key_separator: ".",
+    interval: 1_000
+  )
+end
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,
