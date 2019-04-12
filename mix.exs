@@ -43,7 +43,7 @@ defmodule Metairie.MixProject do
 
   defp description do
     """
-    Plug for handling the creation of presigned urls for direct client-side uploading
+    Modules for help with monitoring Elixir and Phoenix apps.
     """
   end
 

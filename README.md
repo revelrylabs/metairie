@@ -1,6 +1,6 @@
 # Metairie
 
-Modules for monitoring Elixir/Phoenix Apps.
+Modules for help with monitoring Elixir and Phoenix apps.
 
 ## Installation
 
